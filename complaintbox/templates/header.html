@@ -1,0 +1,155 @@
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/tb.css' %}">
+  <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+  <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+<title>Document</title>
+</head>
+<body>
+    
+  <nav class="navbar navbar-expand-lg" style="background-color: rgba(99, 97, 99, 0.537);">
+    <div class="container-fluid">
+        <a class="navbar-brand complaint_font" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-box2-fill" viewBox="0 0 16 16">
+            <path d="M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5ZM15 4.667V5H1v-.333L1.5 4h6V1h1v3h6l.5.667Z"/>
+          </svg>&nbsp;<b>Complaint Box</b></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav font_style">
+
+                {% if request.session.admin %}
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="" style="color:white;font-family: cursive;">HOME</a>
+                </li>
+               
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'viewstudent' %}" style="color: white; font-family: cursive;">View Students</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'cmpltviewadmin' %}" style="color: white; font-family: cursive;">View Complaints</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'facultyreg' %}" style="color:white;font-family: cursive;">Add faculty</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'viewfaculty' %}" style="color:white;font-family: cursive;">View faculty</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'ackfaculty' %}" style="color:white;font-family: cursive;">Acknowledgement</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'viewadmin' %}" style="color:white;font-family: cursive;">View profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logout' %}" style="color:white;font-family: cursive;">Logout</a>
+                </li>
+
+                {% elif request.session.student %}
+
+                <li class="nav-item">
+                    <a class="nav-link" href="" style="color:white;font-family: cursive;">Home</a>
+                </li> 
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'cmpltform' %}" style="color:white;font-family: cursive;">Complaint page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'ackview' %}" style="color:white;font-family: cursive;">View Acknowledgement</a>
+                </li> 
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'profilestudent' %}" style="color:white;font-family: cursive;">View profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logout' %}" style="color:white;font-family: cursive;">Logout</a>
+                </li>
+
+                {% elif request.session.faculty %}
+
+                <li class="nav-item">
+                    <a class="nav-link" href="" style="color:white;font-family: cursive;">Home</a>
+                </li>
+                <li class="nav-item">
+
+              <a class="nav-link" href="{% url 'viewcomplaint' %}" style="color:white;font-family: cursive;">View complaint</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'ackform' %}" style="color:white;font-family: cursive;">Acknowledgement</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'viewfacultyack' %}" style="color:white;font-family: cursive;">Acknowledgement admin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'profilefaculty' %}" style="color:white;font-family: cursive;">View profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logout' %}" style="color:white;font-family: cursive;">Logout</a>
+                </li>
+
+
+                {% else %}
+
+                <li class="nav-item">
+                    <a class="nav-link" href="" style="color:white;font-family: cursive;">HOME</a>
+                </li>
+
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="loginDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        LOGIN
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="loginDropdown">
+                        <a class="dropdown-item" href="{% url 'studentlog' %}">ADMIN</a>
+                        <a class="dropdown-item" href="{% url 'facultylog' %}">FACULTY</a>
+                        <a class="dropdown-item" href="{% url 'studentlog' %}">STUDENT</a>
+
+                    </div>
+                </div>
+                            <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="loginDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        REGISTER
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="loginDropdown">
+                        <a class="dropdown-item" href="{% url 'studentreg' %}">STUDENT</a>
+                        <a class="dropdown-item" href="{% url 'facultyreg' %}">FACULTY</a>
+                    </div>
+                </div>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

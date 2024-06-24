@@ -1,0 +1,28 @@
+{% load static %}
+{% block content %}
+{% include 'header.html' %}
+    <div class="container" style=" width: 100%;">
+        <form id="request" class="main_form" method="POST" action="{% url 'ackform' %}" enctype="multipart/form-data">
+
+    <h1 class="cmplt">Acknowledgement Form</h1>
+    {% csrf_token %}
+
+    <div class="container cmplt_style ">
+        <div class="row">
+            
+            <div class="col-12 col-md-6">
+                <input class="cmplt_style" type="" placeholder="Name" name="name" ><br>
+                <input class="cmplt_style" type="date" placeholder="YYYY-MM-DD" name="date" ><br>
+                <input class="cmplt_style" type="email" placeholder="Student's Email" name="email"><br><br>
+                <input type="" placeholder="Acknowlegement Message" name="ackmesg" id="id_ackmesg" style="height: 100px; width: 800px;border-color: rgb(13, 13, 13);" ><br><br>
+
+                <button type="submit" style=" width: 250px;height: 50px; border-radius: 10px;background-color:orchid; text-align: center;" >Sumit Acknowledgement</button>
+            </div>
+        </div>
+    </div>
+    </form>
+</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ 
+{% include 'footer.html' %}
+{% endblock %}
+    

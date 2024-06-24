@@ -1,0 +1,22 @@
+/* Style for the dropdown toggle */
+.dropdown-toggle {
+    color: white;
+    font-family: cursive;
+}
+
+/* Style for the dropdown items */
+.dropdown-item {
+    color: white;
+    font-family: cursive;
+}
+
+/* Style for the dropdown menu container */
+.dropdown-menu {
+    background-color: #333; /* Background color */
+    border: none; /* Remove the border */
+}
+
+/* Style for the hover state of dropdown items */
+.dropdown-item:hover {
+    background-color: #555; /* Background color on hover */
+}

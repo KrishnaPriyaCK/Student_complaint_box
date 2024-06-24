@@ -1,0 +1,31 @@
+{% load static %}
+{% block content %}
+{% include 'header.html' %}
+
+    <div class="container reg" style="background-color:rgba(74, 10, 134, 0.533);border-radius: 170px;"><br><br>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <img src="{% static 'image/reg.webp' %}" class="img-fluid imgb" alt="...">
+            </div>
+            <div class="col-12 col-md-6">
+                <form id="request" class="main_form" method="POST" action="{% url 'facultylog' %}" enctype="multipart/form-data">
+                    <h1 style="margin-left: 150px;">Login</h1><br><br>
+                {% csrf_token %}
+
+                <div class="container reg2">
+                    <div class="row">
+                        <div class="col-12">
+                            <input class="style1" type="designation" placeholder="Designation" name="designation"><br><br>
+
+                            <input class="style1" type="email" placeholder="Email" name="email"><br><br>
+                           <input class="style1" type="password" placeholder="Password" name="password"><br><br>
+                            <button class="reg3button" type="submit">Login</button><br><br>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+    {% endblock %}

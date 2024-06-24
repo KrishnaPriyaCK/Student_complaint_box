@@ -1,0 +1,261 @@
+.complaint_font
+{
+    font-family:cursive;
+    font-size: larger;
+    font-size: 25px;
+    color:white;
+}
+.font_style
+{
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 150px;
+    font-size: 20px;
+    padding-left: 100px;
+
+}
+.img{
+    width: 700px;
+    height: 700px;
+    margin-top: 50px;
+
+}
+
+.second_portion
+{
+    background-color:rgba(40, 0, 78, 0.781);
+    color: white;
+    align-content: center;
+}
+.second
+{
+    margin-top: 300px;
+    font-family:cursive;
+    font-size: 30px;
+
+}
+.second1
+{
+    font-family:cursive;
+    margin-top: 10px;
+    font-size: 50px;
+
+}
+.Paragarph1
+{
+    text-align: justify;
+    margin-top: 30px;
+    font-family:cursive;
+    font-size: 20px;
+}
+
+.third_head
+{
+    color:rgb(24, 3, 44);
+    text-align: center;
+    font-size: 20px;
+    font-family:cursive;
+
+
+}
+.head4
+{
+    font-family:cursive;
+    font-size: 25px;
+    color:rgb(24, 3, 44);
+    margin-top: 40px;
+
+    
+}
+
+.third_portion1
+
+{
+    color:black;
+    font-size: 18px; 
+    font-family:'Times New Roman', Times, serif;
+    margin-right: 150px;
+   
+}
+.student_img
+{
+    width: 450px;
+    height: 350px;
+}
+.head5
+{
+    font-family:cursive;
+    font-size: 20px;
+    color:rgb(24, 3, 44);
+    text-align: center;  
+}
+.head6
+{
+    font-family:cursive;
+    font-size: 30px;
+    color:rgb(24, 3, 44);
+    text-align: center;  
+}
+.card_titles
+{
+    font-family:cursive;
+    font-size: 20px;
+    color:rgb(24, 3, 44);
+    text-align: center;
+
+}
+.card_section
+{
+    background-color:rgba(45, 3, 85, 0.416);
+}
+.card_section:hover
+{
+    background-color:rgba(74, 10, 134, 0.508);
+    
+}
+.text_style
+{
+    color:black;
+    font-size: 18px; 
+    font-family:'Times New Roman', Times, serif;  
+    text-align: justify;
+}
+.text_style
+{
+    color:black;
+    font-size: 18px; 
+    font-family:'Times New Roman', Times, serif;  
+    text-align: justify;
+}
+.footer_section
+{
+    width: 100%;
+    height: 100%;
+    background-color:rgb(15, 1, 28);
+    
+
+}
+.footer_head
+{  
+    font-family:Georgia, 'Times New Roman', Times, serif; 
+    font-size: larger;
+    font-size: 25px;
+    color:#eef4f5;
+
+}
+
+.footer_paragraph
+{
+    text-align: justify;
+    margin-top: 10px;
+    font-family:'Times New Roman', Times, serif;
+    color: white;
+    font-size: 18px;
+}
+.footer_head1
+{
+    font-family:cursive; 
+    font-size: 25px;
+    color:#eef4f5;
+    margin-left: 70px;
+
+}
+.list
+{
+    font-family: cursive;
+    font-size: 15px;
+    list-style-type: none;
+    margin-left: 70px;
+    color: white;
+}
+.list2
+{
+    font-family: cursive;
+    font-size: 15px;
+    margin-left: 70px;
+    color: white;
+
+}
+.box
+{
+    font-family: cursive;
+    font-size: 15px;
+    margin-left: 70px;
+    color: white;
+    height: 40px;
+
+}
+.button1
+{
+    font-family: cursive;
+    font-size: 15px;
+    margin-left: 70px;
+    color:rgb(42, 3, 79);
+    height: 40px;
+    width: 190px;
+    border-radius: 20px;  
+    color: black; 
+}
+.button1:hover
+{
+    background-color: #ccc3bd;
+}
+
+.imgb
+{
+    z-index: -1;
+    height: 650px;
+    border: 0;
+
+}
+.reg 
+{
+    background-color:rgb(249, 245, 243);
+
+    font-family: cursive;
+    padding: 10px; /* Added padding for spacing */
+}
+    
+
+
+.reg2
+{
+    margin-left: 50px;
+}
+.style
+{
+    margin-left: 30px;
+}
+
+.style1
+{
+    height: 50px;
+    width: 400px;
+}
+.reg3button
+{
+    text-align: center;
+    margin-left: 150px;
+    width: 150px;
+    height:40px ;
+}
+.reg3button:hover
+{
+    background-color: #ccc3bd;
+}
+.cmplt
+{
+    font-family: cursive;
+    margin-top: 20px;
+    color:rgb(24, 3, 44);
+    text-align: center;
+}
+.cmplt_style
+{
+    height: 40px;
+    width: 800px;
+    margin-top: 30px;
+    font-family: cursive;
+    border-color:rgb(13, 13, 13);
+
+}
+

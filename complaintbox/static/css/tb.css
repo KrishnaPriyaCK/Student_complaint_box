@@ -1,0 +1,40 @@
+.tbhead
+{
+    text-align: center;
+    font-family: cursive;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+
+
+/* Style the table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Style the table header */
+.table th {
+    background-color: orchid; /* Header background color */
+    color: #fff; /* Header text color */
+    padding: 10px;
+    text-align: left;
+}
+
+/* Style table rows */
+.table td, .table th {
+    border: 1px solid #ddd; /* Border for cells */
+    padding: 10px;
+}
+
+/* Style alternating rows with a background color */
+.table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+/* Style table image size */
+.table img {
+    max-height: 50px;
+    max-width: 50px;
+}

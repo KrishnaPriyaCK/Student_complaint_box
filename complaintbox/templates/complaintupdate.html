@@ -1,0 +1,41 @@
+{% load static %}
+{% block content %}
+{% include 'header.html' %}
+    <div class="container" style=" width: 100%;">
+    <form id="request" class="main_form" method="POST" action="cmupdate/{{res.id}}" enctype="multipart/form-data">
+
+    <h1 class="cmplt">Update Complaint Form</h1>
+    {% csrf_token %}
+
+    
+    <div class="container cmplt_style ">
+        <div class="row">
+            
+            <div class="col-12 col-md-6">
+                <select class="cmplt_style" id="complaintto" name="complaintto">
+                    <option value="" {% if res.complaintto == "" %}selected{% endif %}>Select Whom you are sending the complaint:</option>
+                    <option value="Trainer" {% if res.complaintto == "Trainer" %}selected{% endif %}>Trainer</option>
+                    <option value="HR" {% if res.complaintto == "HR" %}selected{% endif %}>HR</option>
+                    <option value="operations" {% if res.complaintto == "operations" %}selected{% endif %}>operations</option>
+                </select>
+                
+                  
+                <br>
+                <input class="cmplt_style" type="date" placeholder="YYYY-MM-DD" name="date" value="{{res.date}}"><br>
+                <input class="cmplt_style" type="text" placeholder="Name" name="name" value="{{res.name}}"><br>
+                <input class="cmplt_style" type="email" placeholder="Email" name="email" value="{{res.email}}"><br><br>
+                <input type="text" placeholder="Message" name="complaintmesg" value="{{res.complaintmesg}}" style="height: 100px; width: 800px;border-color: rgb(13, 13, 13);" ><br>
+                <input class="cmplt_style" type="text" placeholder="Status" name="status" value="{{res.status}}"><br><br>
+
+                <button style=" width: 190px;height: 50px; border-radius: 10px;background-color: orchid; text-align: center;" type="submit">Update</button>
+            </div>
+        </div>
+    </div><br><br><br><br><br><br><br><br><br>
+    </form><br><br><br><br><br><br>
+</div><br><br><br><br><br><br><br><br>
+
+
+{% include 'footer.html' %}
+{% endblock %}
+
+

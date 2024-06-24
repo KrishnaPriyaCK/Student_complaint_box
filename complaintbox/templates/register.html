@@ -1,0 +1,45 @@
+{% load static %}
+{% block content %}
+{% include 'header.html' %}
+
+    <div class="container reg" style="background-color:rgba(74, 10, 134, 0.533);border-radius: 170px;"><br><br>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <img src="{% static 'image/reg.webp' %}" class="img-fluid imgb" alt="...">
+            </div>
+            <div class="col-12 col-md-6">
+                <form id="request" class="main_form" method="POST" action="{% url 'studentreg' %}" enctype="multipart/form-data">
+                    <h1 style="margin-left: 150px;">Registration</h1><br><br>
+                {% csrf_token %}
+
+                <div class="container reg2">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <input class="style" placeholder="Name*" type="file" name="userphoto"> 
+                         </div><br><br>
+                        <div class="col-12">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope svg_style" viewBox="0 0 16 16">
+                                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                            </svg><input class="style1" type="email" placeholder="Email" name="useremail"><br>
+                            <br>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-fill svg_style" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                            </svg><input class="style1" type="" placeholder="Name" name="username" id="id_username"><br>
+                            <br>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-telephone-fill svg_style" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                            </svg><input class="style1" type="" placeholder="Phonenumber" name="userphone" id="id_userphone"><br>
+                            <br>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-key-fill svg_style" viewBox="0 0 16 16">
+                                <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                            </svg><input class="style1" type="password" placeholder="Password" name="password"><br><br>
+                            <button class="reg3button" type="submit">Register</button><br><br>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+    {% endblock %}

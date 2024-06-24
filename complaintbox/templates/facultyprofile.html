@@ -1,0 +1,49 @@
+{% load static %}
+{% block content %}
+{% include 'header.html' %}
+
+<section class="vh-100" style="background-color:rgba(74, 10, 134, 0.508);">
+  <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-lg-6 mb-4 mb-lg-0">
+              <div class="card mb-3" style="border-radius: .5rem;">
+                <div class="row g-0">
+                  <div class="col-md-4 gradient-custom text-center text-white"
+                    style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;"><br><br><br><br>
+                    <h5>WELCOME</h5>
+                    <i class="far fa-edit mb-5"></i>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body p-4">
+                      <h6>Information</h6>
+                      <hr class="mt-0 mb-4">
+                      <div class="row pt-1">
+                        <div class="col-6 mb-3">
+                            <h6>DESIGNATION</h6>
+                            <p class="text-muted">{{res.designation}}</p>
+                          </div>
+                        <div class="col-6 mb-3">
+                            <h6>NAME</h6>
+                            <p class="text-muted">{{res.name}}</p>
+                          </div>
+                        <div class="col-6 mb-3">
+                          <h6>EMAIL</h6>
+                          <p class="text-muted">{{res.email}}</p>
+                        </div>
+                      
+                        <div class="col-6 mb-3">
+                            <h6>PASSWORD</h6>
+                            <p class="text-muted">{{res.password}}</p>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+ 
+  {% include 'footer.html' %}
+{% endblock %}
